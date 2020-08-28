@@ -3,7 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 import { format } from "date-fns";
 import { print } from "graphql/language/printer";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import prismStyle from "react-syntax-highlighter/styles/prism/xonokai";
+import prismStyle from "../styles/tomorrow";
 import styles from "../styles/Home.module.css";
 
 const ResumeQuery = gql`
@@ -16,6 +16,8 @@ const ResumeQuery = gql`
       github
       linkedin
       objective
+      skills
+      phone
     }
     positions {
       id
@@ -41,7 +43,7 @@ export default function Home() {
   if (loading) {
     return (
       <header className={styles.header}>
-        <h1>Leigh Halliday</h1>
+        <h1>Rayan Ramirez</h1>
         <h2>loading...</h2>
       </header>
     );
@@ -64,6 +66,10 @@ export default function Home() {
       <div className={styles.split}>
         <div className={styles.left}>
           <h2>Contact</h2>
+          <p>
+            <strong>Phone</strong>{" "}
+            <a href={`tel:${bio.phone}`}>{bio.phone}</a>
+          </p>
           <p>
             <strong>Email</strong>{" "}
             <a href={`mailto:${bio.email}`}>{bio.email}</a>
@@ -117,6 +123,12 @@ export default function Home() {
                     <li key={achievement}>{achievement}</li>
                   ))}
                 </ul>
+                <h3>Skills</h3>
+                {  <ul>
+                  {bio.skills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>}
               </div>
             );
           })}

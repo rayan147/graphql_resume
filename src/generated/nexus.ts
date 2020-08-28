@@ -62,6 +62,8 @@ export interface NexusGenFieldTypes {
     linkedin: NexusGenScalars['URL']; // URL!
     name: string; // String!
     objective: string; // String!
+    phone: string; // String!
+    skills: string[]; // [String!]!
     tagline: string; // String!
     website: NexusGenScalars['URL']; // URL!
   }

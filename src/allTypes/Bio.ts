@@ -7,8 +7,10 @@ export const Bio = objectType({
     t.string("tagline");
     t.string("email");
     t.string("objective");
+    t.string('phone');
     t.url("github", (bio) => new URL(bio.github));
     t.url("website", (bio) => new URL(bio.website));
     t.url("linkedin", (bio) => new URL(bio.linkedin));
+    t.list.string("skills", (bio) => bio.skills);
   },
 });

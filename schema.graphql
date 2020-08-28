@@ -8,6 +8,8 @@ type Bio {
   linkedin: URL!
   name: String!
   objective: String!
+  phone: String!
+  skills: [String!]!
   tagline: String!
   website: URL!
 }

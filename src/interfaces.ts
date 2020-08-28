@@ -6,6 +6,8 @@ export interface BioInterface {
   website: string;
   linkedin: string;
   objective: string;
+  phone:string;
+  skills: string[];
 }
 
 export interface PositionInterface {
