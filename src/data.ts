@@ -7,7 +7,7 @@ export const data = {
     website: "https://www.rayanr.com",
     phone:"973-870-6309",
     linkedin: "https://www.linkedin.com/in/rayan-ramirez-24391117b/",
-    objective: "Seeking a position as a Developer in a challenging environment that utilizes team-work effort for researching, learning ,developing and deploying  new high-tech products. ",
+    objective: "Seeking a position as a Developer in a challenging environment that utilizes team-work effort for researching, learning  and deploying  new high-tech products. ",
     skills: ["AWS Cloud: EC2, S3 ,Route53 ,Couldfront,Cognito ,Lambda","Frontend tech:React.js,Next.js","Programming Languages :Javascript,Python","Version control systems:Git","Backend tech:Node.js ,Express.js ,MongoDB ,Mongoose,GraphQL,Restful API MVC","Other skills:Docker,Nginx,CI/CD","Speaking Spanish"],
   },
  
